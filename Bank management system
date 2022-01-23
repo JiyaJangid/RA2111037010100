@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main()
+{
+	char name[20], addr[20] ;
+	int mon, choice ;
+	printf("Enter your name: ");
+	scanf("%[^\n]%*c",name);
+	printf("Enter your address: ");
+	scanf("%[^\n]s",addr);
+	printf("Enter your amount to be deposited: ");
+	scanf("%d",&mon);
+	printf("Account Created Successfully\n");
+	printf(" 1. Deposit Money\n 2. Withdraw Money\n 3. Display account\n Enter your choice: ");
+	scanf("%d",&choice);
+
+if( choice==1)
+{
+	int monadd;
+	printf("Enter your amount to be deposited: ");
+	scanf("%d", &monadd);
+	mon= mon+ monadd;
+	printf("New balance: %d", mon);
+
+}
+
+if( choice==2)
+{
+	int monsub;
+	printf("Enter your amount to be withdrawn: ");
+	scanf("%d",&monsub);
+	mon= mon- monsub;
+	printf("New balance: %d", mon);
+}
+
+
+if( choice==3)
+{
+	printf("Your name: ");
+	printf("%s",name);
+	printf("Your address: ");
+	printf("%s",addr);
+	printf("Your balance: ");
+	printf("%d",mon);
+}
+	return 0;
+}
